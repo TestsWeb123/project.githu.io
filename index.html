@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="asset/css/style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+   
+</head>
+<body>
+<head>
+    <nav class="navbar">
+        <ul class="navbar-nav">
+            <li class="navbar-item">
+                <a href="#home" class="nav-link">Home</a>
+            </li>
+            <li class="navbar-item">
+                <a href="#about" class="nav-link">About</a>
+            </li>
+            <li class="navbar-item">
+                <a href="#projects" class="nav-link">Project</a>
+            </li>
+            <li class="navbar-item">
+                <a href="#skills" class="nav-link">Skill</a>
+            </li>
+            <li class="navbar-item">
+                <a href="#experience" class="nav-link">experience</a>
+            </li>
+            <li class="navbar-item">
+                <a href="#contact" class="nav-link">Contact</a>
+            </li>
+        </ul>
+    </nav>
+</head>
+    
+    <section id="home">
+        <h1>Home</h1>
+       <div class="card-img">
+        <img src="asset/css/img/image.png" alt="">
+       </div>
+       <h1 class="card-text">Hello I'm meng</h1>
+       <p class="title"><span>Full Stack Developer,</span>constantly fueling my passion for learning. I'm always on the lookout for new things to try.</p>
+       <a href="https://www.facebook.com/" class="nav-link"><i class="fa-brands fa-facebook"></i></a>
+       <a href="https://www.threads.net/@zzy_meng?igshid=NTc4MTIwNjQ2YQ==" class="nav-link"><i class="fa-brands fa-linkedin"></i></a>
+       <a href="https://www.instagram.com/zzy_meng?igsh=MW1oNmdtZHRzMTg1cg%3D%3D&utm_source=qr" class="nav-link"><i class="fa-brands fa-twitter"></i></a>
+       <div class="slas">|</div>
+    </section>
+    <section id="about">
+        <h1>About Me</h1>
+        <div class="box">
+            <img src="asset/css/img/image.png" alt="">
+        </div>
+        <p>I'm a third-year Computer Science student at RUPP. I have good frontend knowledge, mainly working with HTML, CSS, and frameworks like Tailwind CSS and Bootstrap. I'm also starting to learn backend development.</p>
+    </section>
+    <section id="projects" class="pro">
+        <h1>projects</h1>
+        <p>Nike is one of the most iconic and influential footwear brands in the world. Founded in 1964 as Blue Ribbon Sports by Bill Bowerman and Phil Knight, it officially became Nike, Inc. in 1971. The brand is named after Nike, the Greek goddess of victory, and its "Swoosh" logo symbolizes speed and motion.</p>
+
+        <img src="asset/css/img/custom-nike-dunk-high-by-you-shoes.png" alt="">
+        <a href="asset/css/page/page.html" class="view">link to projects</a>
+    </section>
+    <section id="skills">
+        <h1>Skills</h1>
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill"><img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="HTML"> HTML</div>
+            <div class="skill"><img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="CSS"> CSS</div>
+            <div class="skill"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968672.png" alt="Bootstrap"> Bootstrap</div>
+            <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" alt="Tailwind"> Tailwind</div>
+            <div class="skill"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="JS"> JS</div>
+            <div class="skill"><img src="https://cdn-icons-png.flaticon.com/512/6132/6132222.png" alt="C++"> C++</div>
+            <div class="skill"><img src="https://cdn-icons-png.flaticon.com/512/226/226777.png" alt="Java"> Java</div>
+        </div>
+    </section>
+    <section id="experience">
+        <h1>Experience</h1>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    
+                    <p>Now this is a story all about how,</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    
+                    <p>My life got flipped turned upside down,</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    
+                    <p>And I'd like to take a minute, just sit right there,</p>
+                </div>
+            </div>
+        </div>
+    
+    </section>
+    <section id="contact">
+        <h1>Contact</h1>
+        <form class="contact-form">
+            <p>Feel free to reach out to me at <span><a href="mailto:mengzzy8@gmail.com">mengzzy8@gmail.com</a></span> or through the form below.</p>
+            <!-- <input type="text" name="name" placeholder="Your Name" required> -->
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    
+    <script>
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(event) {
+                event.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                document.getElementById(targetId).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const items = document.querySelectorAll(".timeline-item");
+
+            function animateTimeline() {
+                items.forEach((item, index) => {
+                    setTimeout(() => {
+                        item.style.opacity = "1";
+                        item.style.transform = "translateY(0)";
+                    }, index * 500);
+                });
+            }
+
+            animateTimeline();
+        });
+    </script>
+
+</body>
+</html>
